@@ -41,7 +41,7 @@ def play():
 
 
 app = QApplication([])
-windows = loadUi ("untitled.ui")
+windows = loadUi("untitled.ui")
 windows.show()
 windows.b.clicked.connect(play)
 app.exec_()
