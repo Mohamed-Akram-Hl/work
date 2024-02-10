@@ -34,7 +34,8 @@ def Chance (ch):
 
 
 def play():
-    print("hello world!")
+    ch = windows.c.text()
+    windows.a.setText(Chance(ch))
 
 
 
