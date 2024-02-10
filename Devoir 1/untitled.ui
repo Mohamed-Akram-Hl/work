@@ -30,30 +30,30 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>360</x>
       <y>20</y>
-      <width>141</width>
+      <width>221</width>
       <height>81</height>
      </rect>
     </property>
     <property name="text">
-     <string>Societe Commercial</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Societe Commercial&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>110</y>
-      <width>201</width>
+      <width>231</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Entrer votre numero de telephone</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Entrer votre numero de telephone&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="c">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -61,6 +61,19 @@
       <width>531</width>
       <height>31</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="a">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>220</y>
+      <width>401</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
