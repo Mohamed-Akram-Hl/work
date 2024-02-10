@@ -13,7 +13,7 @@ def premier(n):
         return False
     
     max_divisor = sqrt(n)
-    for d in range(3, max_divisor + 1, 2):
+    for d in range(3, int(max_divisor) + 1, 2):
         if n % d == 0:
             return False
     return True
