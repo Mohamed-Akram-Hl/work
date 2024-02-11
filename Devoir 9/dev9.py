@@ -10,7 +10,7 @@ def push(key, ch):
     if key > 0:
         for i in range(key):
             alfa = alfa + alfa[0]
-            alfa = alfa[1:26]
+            alfa = alfa[1:27]
     elif key < 0:
         for i in range(int(abs(key))):
             alfa = alfa[25] + alfa
@@ -28,7 +28,8 @@ def verifMa(a,b,ch):
     return bool
 
 def verifnum(n):
-    if len(n) != 1: 
+    
+    if len(n) > 1: 
         if (n[0] == "-" or n[0].isdecimal()) and n[1:].isdecimal():
             return True
     elif len(n) == 1:

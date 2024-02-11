@@ -4,32 +4,57 @@ from math import*
 
 
 def push(key, ch):
-    alfa = ""
+    alfaMA = ""
     for i in range(ord("A"), ord("Z")+1):
-        alfa = alfa + chr(i)
+        alfaMA = alfaMA + chr(i)
     for i in range(key):
-        alfa = alfa + alfa[0]
-        alfa = alfa[1:26]
+        alfaMA = alfaMA + alfaMA[0]
+        alfaMA = alfaMA[1:27]
+    alfaMI = ""
+    for i in range(ord("a"), ord("z")+1):
+        alfaMI = alfaMI + chr(i)
+    for i in range(key):
+        alfaMI = alfaMI + alfaMI[0]
+        alfaMI = alfaMI[1:27]
     res = ""
     for i in range(len(ch)):
-        res = res + alfa[ord(ch[i]) - ord("A")]
+        if "A"<=ch[i]<="Z":
+            res = res + alfaMA[ord(ch[i]) - ord("A")]
+        elif "a"<=ch[i]<="z":
+            res = res + alfaMI[ord(ch[i]) - ord("a")]
+        elif ch[i] == " ":
+            res = res + " "
     return res
 
 
 def verif_alfa(ch):
     bool = True
     for i in range(len(ch)):
-        bool = ("A" <= ord(ch[i]) <= "Z") or ("A" <= ord(ch[i]) <= "Z")
+        bool = ("A" <= ch[i] <= "Z") or ("a" <= ch[i] <= "z") or ch[i] == " "
     return bool
+
+def superflu(ch):
+    if ch.find("  ")!=-1 or ch[0] == " " or ch[len(ch)-1] == " ":
+        return True
+    return False
+
+def chount(c, ch):
+    count = 0
+    for i in range(len(ch)):
+        if ch[i:i+len(c)] == c:
+            count += 1
+    return count
 
 
 
 def play():
     ch = windows.a.text()
     if not(verif_alfa(ch)):
-        windows.c.setText("please enter a valide key and a valide msg")
+        windows.c.setText("please enter a valide msg")
+    elif superflu(ch):
+        windows.c.setText("please remove extra spaces")
     else:
-        windows.c.setText(push(len(ch), ch))
+        windows.c.setText(push(chount(" ", ch) + 1, ch))
 
 
 app = QApplication([])
