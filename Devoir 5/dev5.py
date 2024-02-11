@@ -56,7 +56,10 @@ def power(ch):
     ch = ch + "*"
     p = ""
     while ch != "":
-        p = p + "(" + ch[0: ch.find("*")] + "^" + str(compter(ch[0:ch.find("*")+1],ch))+ ")" + "*"
+        if compter(ch[0:ch.find("*")+1],ch) != 1:
+            p = p + "(" + ch[0: ch.find("*")] + "^" + str(compter(ch[0:ch.find("*")+1],ch))+ ")" + "*"
+        else:
+            p = p + ch[0: ch.find("*")] + "*"
         ch = delete(ch, ch[0:ch.find("*")+1])
     return p[0: len(p)-1]
 
