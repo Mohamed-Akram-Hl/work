@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Produit Puissance</string>
+     <string>Code Cesar</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -37,10 +37,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>Donner un nombre</string>
+     <string>Message</string>
     </property>
    </widget>
-   <widget class="QLabel" name="b">
+   <widget class="QLabel" name="c">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -53,7 +53,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="c">
+   <widget class="QPushButton" name="d">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -63,7 +63,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>verifier</string>
+     <string>crypter</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="a">

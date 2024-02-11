@@ -58,7 +58,7 @@ def play():
 
 
 app = QApplication([])
-windows = loadUi(r"C:\Users\akram\OneDrive\Documents\BAC\BAC MATH 2024\Informatique\work\Devoir 9\untitled.ui")
+windows = loadUi(r"C:\Users\akram\OneDrive\Documents\BAC\BAC MATH 2024\Informatique\work\Devoir 10\untitled.ui")
 windows.show()
 windows.d.clicked.connect(play)
 app.exec_()
