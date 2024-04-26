@@ -17,22 +17,22 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>40</y>
-      <width>251</width>
+      <x>210</x>
+      <y>30</y>
+      <width>471</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;EAN13&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Jeu chance pour notre société commerciale&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="a">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>340</x>
       <y>130</y>
-      <width>461</width>
+      <width>401</width>
       <height>41</height>
      </rect>
     </property>
@@ -55,12 +55,12 @@
      <rect>
       <x>30</x>
       <y>140</y>
-      <width>241</width>
+      <width>291</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Taper un numero forme par 13 chiffre:</string>
+     <string>Taper le cout d'achat annual:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="d">

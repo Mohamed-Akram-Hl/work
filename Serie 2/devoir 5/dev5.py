@@ -7,24 +7,28 @@ from math import*
 def Verif(ch):
     boo = True
     i=0
-    while i <len(ch) and boo:
+    while i <4 and boo:
         boo = "0"<=ch[i]<="9"
         i = i+1
-    return boo
+    t = ch[i] == "."
+    i = 5
+    while i < len(ch) and boo:
+        boo = "0"<=ch[i]<="9"
+        i = i+1
+    return t and bool
 
 
-def EAN13(ch):
-    cc = int(ch[len(ch)-1])
-    q = ch[0:len(ch)-1]
-    res =0
-    for i in range(12):
-        if i % 2 == 0:
-            res = res + int(ch[i])
-        else:
-            res = res + int(ch[i])*3
-    r = res % 10
-    p = 10 - r
-    return p == cc
+def Gan(ch):
+    n = float(ch)
+    n = round(n)
+    n = str(n)
+    res = 0
+    for i in range(len(n)):
+        res = res + int(n[i])
+    
+    bool = res % 10 == 0
+    return bool
+    
 
 
 
@@ -34,14 +38,12 @@ def EAN13(ch):
 def play():
 
     ch = windows.a.text()
-    if ch == "" or not(Verif(ch)):
-        windows.c.setText("le numero doit etre uniquement formé par des chiffres")
-    elif len(ch) !=13:
-        windows.c.setText("le numero doit etre formé de 13 chiffre")
-    elif EAN13(ch) == True :
-        windows.c.setText(ch + " est un numero EAN13 Valide")
+    if len(ch) != 8 or not(Verif(ch)):
+        windows.c.setText("plz donner un nombre valide")
+    elif Gan(ch) == True :
+        windows.c.setText("Félicitation, vous avez gagné")
     else:
-        windows.c.setText(ch + " n'est pas un numero EAN13 Valide")
+        windows.c.setText("Desolé vous n'aver pas gagné")
 
 def Effa():
     windows.c.clear()
